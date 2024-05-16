@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assign Department</title>
+    <link rel="stylesheet" href="{% static 'css/assignDep.css' %}"> <!-- Link to your CSS file -->
+</head>
+
+<body>
+    <section>
+        <div class="layer">
+            <header>
+                <div class="navbar">
+                    <div class="left">
+                        <img src="{% static 'imgs/logo-re.png' %}" alt="College Logo">
+                    </div>
+                    <div class="right">
+                        <button><a href="{% url 'admin' %}">Home</a></button>
+                        <img src="{% static 'imgs/profile.png' %}" alt="Profile Logo">
+                    </div>
+                </div>
+            </header>
+            <div class="admin-container">
+                <h2>Assign Department</h2>
+                <form>
+                    <label for="student-name">Student Name:</label>
+                    <input type="text" id="student-name" name="student-name">
+                    <label for="student-id">Student ID:</label>
+                    <input type="text" id="student-id" name="student-id">
+                    <label for="student-department">Department:</label>
+                    <input type="text" id="student-department" name="student-department">
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 JIMM university. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

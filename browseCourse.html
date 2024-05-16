@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Courses</title>
+    <link rel="stylesheet" href="{% static 'css/browseCourse.css' %}">
+</head>
+
+<body>
+    <section>
+        <div class="layer">
+            <header>
+                <div class="navbar">
+                    <div class="left">
+                        <img src="{% static 'imgs/logo-re.png' %}" alt="College Logo">
+                    </div>
+                    <div class="right">
+                        <button><a href="{% url 'admin' %}">Home</a></button>
+                        <img src="{% static 'imgs/profile.png' %}" alt="Profile Logo">
+                    </div>
+                </div>
+            </header>
+            <div class="admin-container">
+                <h2>Browse Courses</h2>
+                <form id="search-form">
+                    <input type="text" id="search-input" placeholder="Search by subject">
+                    <input type="text" id="search-input" placeholder="Search by course number">
+                    <input type="text" id="search-input" placeholder="Search by keyword">
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 JIMM university. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

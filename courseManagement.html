@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Management</title>
+    <link rel="stylesheet" href="{% static 'css/courseManagement.css' %}"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="left">
+                <img src="{% static 'imgs/logo-re.png' %}" alt="College Logo">
+            </div>
+            <div class="right">
+                <button><a href="{% url 'admin' %}">Home</a></button>
+                <img src="{% static 'imgs/profile.png' %}" alt="Profile Logo">
+            </div>
+        </nav>
+        <!-- <h1>Course Management</h1> -->
+        <div class="options-container">
+            <div class="option">
+                <a href="{% url 'courseAssessment' %}">
+                    <h2>Course Assessment</h2>
+                    <p>Manage assignments, quizzes, exams, and grading.</p>
+                </a>
+            </div>
+            <div class="option">
+                <a href="{% url 'instructorAssignment' %}">
+                    <h2>Instructor Assignment</h2>
+                    <p>Assign instructors or teaching assistants to courses.</p>
+                </a>
+            </div>
+            <!-- <div class="option">
+                <a href="{% url 'courseCatalog' %}">
+                    <h2>Course Catalog</h2>
+                    <p>Browse available courses, view descriptions, and schedules.</p>
+                </a>
+            </div> -->
+            <div class="option">
+                <a href="{% url 'courseReport' %}">
+                    <h2>Course Reports</h2>
+                    <p>Generate reports on enrollment, attendance, completion rates, and performance.</p>
+                </a>
+            </div>
+        </div>
+    </header>
+    <footer>
+        <p>&copy; 2024 JIMM university. All rights reserved.</p>
+    </footer>
+</body>
+</html>

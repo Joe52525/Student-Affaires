@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Courses</title>
+    <link rel="stylesheet" href="{% static 'css/RegisterCourse.css' %}"> <!-- Import styles from the student view page -->
+</head>
+ 
+<body>
+    <header>
+        <div class="layer">
+            <nav class="navbar">
+                <div class="left">
+                    <img src="{% static 'imgs/logo-re.png' %}" alt="College Logo">
+                </div>
+                <div class="right">
+                    <button><a href="{% url 'Student' %}">Home</a></button>
+                    <img src="{% static 'imgs/profile.png' %}" alt="Profile Logo">
+                </div>
+            </nav>
+            <div class="admin-container">
+                <h2>Register Courses</h2>
+                <!-- Add your course registration form here -->
+                <form id="course-registration-form">
+                    <!-- Add input fields for course registration -->
+                    <div class="form-group">
+                        <label for="course-name">Course Name:</label>
+                        <input type="text" id="course-name" name="course-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="course-code">Course Code:</label>
+                        <input type="text" id="course-code" name="course-code" required>
+                    </div>
+                    <!-- Add more input fields as needed -->
+                    <button type="submit">Register</button>
+                </form>
+            </div>
+        </div>
+    </header>
+    <footer>
+        <p>&copy; 2024 JIMM university. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script> <!-- Link to your JavaScript file -->
+</body>
+ 
+</html>

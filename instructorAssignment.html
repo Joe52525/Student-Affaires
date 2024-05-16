@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructor Assignment</title>
+    <link rel="stylesheet" href="{% static 'css/instructorAssignment.css' %}"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header>
+        <div class="layer">
+            <nav class="navbar">
+                <div class="left">
+                    <img src="{% static 'imgs/logo-re.png' %}" alt="College Logo">
+                </div>
+                <div class="right">
+                    <button><a href="{% url 'courseManagement' %}">Back</a></button>
+                    <img src="{% static 'imgs/profile.png' %}" alt="Profile Logo">
+                </div>
+            </nav>
+            <div class="options-container">
+                <div class="option">
+                    <!-- <h2>Assign Instructor to Course</h2>
+                    <p>Assign instructors or teaching assistants to courses.</p> -->
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="assign-container">
+                    <h2>Choose Instructor:</h2>
+                    <ul class="assign-list">
+                        {% for i in "123456789" %}
+                        <li>
+                            <select>
+                                <option value="{{ i }}">Instructor {{ i }}</option>
+                            </select>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+        
+                <div class="assign-container">
+                    <h2>Choose Course:</h2>
+                    <ul class="assign-list">
+                        {% for i in "123456789" %}
+                        <li>
+                            <select>
+                                <option value="{{ i }}">Course {{ i }}</option>
+                            </select>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <footer>
+        <p>&copy; 2024 JIMM university. All rights reserved.</p>
+    </footer>
+</body>
+</html>

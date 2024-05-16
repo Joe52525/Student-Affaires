@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View ID</title>
+    <link rel="stylesheet" href="{% static 'css/viewID.css' %}"> <!-- Link to your CSS file -->
+</head>
+
+<body>
+    <header>
+        <div class="layer">
+            <nav class="navbar">
+                <div class="left">
+                    <img src="{% static 'imgs/logo-re.png' %}" alt="College Logo">
+                </div>
+                <div class="right">
+                    <button><a href="{% url 'Student' %}">Home</a></button>
+                    <img src="{% static 'imgs/profile.png' %}" alt="Profile Logo">
+                </div>
+            </nav>
+            <div class="id-container">
+                <h2>Your ID Card</h2>
+                <div class="id-card">
+                    <div class="id-photo">
+                        <img src="{% static 'imgs/img_png.png' %}" alt="Student Photo">
+                    </div>
+                    <div class="id-details">
+                        <p><strong>Name:</strong> John Doe</p>
+                        <p><strong>ID:</strong> 200013210</p>
+                        <p><strong>Faculty:</strong> Faculty of Information Technology</p>
+                    </div>
+                </div>
+                <!-- <button><a href="{% url 'Student' %}">Home</a></button> -->
+            </div>
+        </div>
+    </header>
+
+</body>
+
+</html>

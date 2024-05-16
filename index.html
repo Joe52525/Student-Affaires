@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Affairs Login</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> <!-- Link to your CSS file -->
+</head>
+
+<body>
+    <header>
+        <div class="layer">
+            <div class="login-container">
+                <img src="{% static 'imgs/logo-re.png' %}" alt="College Logo">
+                <h2>Welcome to JIMM University</h2>
+                <p>Enter your username and password to log in.</p>
+                <form id="login-form">
+                    <div class="input-group">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        // Dictionary to store username-password-role triples
+        var userCredentials = {
+            "joo": {"password": "123", "role": "student"},
+            "ibrahim": {"password": "123", "role": "admin"},
+            "mohaned": {"password": "611", "role": "student"},
+            "muhammed": {"password": "1234", "role": "student"},
+            "muhammed": {"password": "123", "role": "admin"},
+            // Add more users as needed
+        };
+    
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+            
+            // Get username and password values
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            
+            // Check if entered credentials match those in the dictionary
+            if (userCredentials.hasOwnProperty(username) && userCredentials[username].password === password) {
+                // Redirect based on the role of the user
+                if (userCredentials[username].role === "admin") {
+                    window.location.href = "{% url 'admin' %}"; // Redirect to admin.html
+                } else if (userCredentials[username].role === "student") {
+                    window.location.href = "{% url 'Student' %}"; // Redirect to student.html
+                }
+            } else {
+                // Handle incorrect credentials
+                alert("Incorrect username or password");
+            }
+        });
+    </script>
+    
+
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News and Announcements</title>
+    <link rel="stylesheet" href="{% static 'css/newsAnnouncements.css' %}"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header>
+        <div class="layer">
+            <nav class="navbar">
+                <div class="left">
+                    <img src="{% static 'imgs/logo-re.png' %}" alt="College Logo">
+                </div>
+                <div class="right">
+                    <button><a href="{% url 'Student' %}">Home</a></button>
+                    <img src="{% static 'imgs/profile.png' %}" alt="Profile Logo">
+                </div>
+            </nav>
+        </div>
+        <main class="main">
+             <div class="top">
+                
+             </div>
+            <section id="latest-news">
+                <h2>Latest News</h2>
+                <article>
+                    <h3>Event Title</h3>
+                    <p>Description of the event or news.</p>
+                    <time datetime="2024-05-15">May 15, 2024</time>
+                </article>
+                <!-- More news articles can be added here -->
+            </section>
+            <section id="announcements">
+                <h2>Announcements</h2>
+                <article>
+                    <h3>Important Announcement</h3>
+                    <p>Details of the announcement.</p>
+                    <time datetime="2024-05-10">May 10, 2024</time>
+                </article>
+                <!-- More announcements can be added here -->
+            </section>
+            <section id="event-calendar">
+                <h2>Event Calendar</h2>
+                <iframe src="https://calendar.google.com/calendar/embed?src=example%40gmail.com" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+            </section>
+        </main>
+    </header>
+    
+    <footer>
+        <p>&copy; 2024 JIMM university. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Calendar</title>
+    <link rel="stylesheet" href="{% static 'css/academicCalendar.css' %}"> <!-- Link to your CSS file -->
+</head>
+
+<body>
+    <header>
+        <div class="layer">
+            <nav class="navbar">
+                <div class="left">
+                    <img src="{% static 'imgs/logo-re.png' %}" alt="College Logo">
+                </div>
+                <div class="right">
+                    <button><a href="{% url 'Student' %}">Home</a></button>
+                    <img src="{% static 'imgs/profile.png' %}" alt="Profile Logo">
+                </div>
+            </nav>
+            <div class="admin-container">
+                <h2>Academic Calendar</h2>
+                <div class="calendar">
+                    <!-- Dummy academic calendar -->
+                    <div class="event">
+                        <div class="date">September 1, 2024</div>
+                        <div class="description">First day of classes</div>
+                    </div>
+                    <div class="event">
+                        <div class="date">October 15, 2024</div>
+                        <div class="description">Midterm exams</div>
+                    </div>
+                    <div class="calendar">
+                        <!-- Dummy academic calendar -->
+                        <div class="event">
+                            <div class="date">September 1, 2024</div>
+                            <div class="description">First day of classes</div>
+                        </div>
+                        <div class="event">
+                            <div class="date">October 15, 2024</div>
+                            <div class="description">Midterm exams</div>
+                        </div>
+                        <!-- Add more events as needed -->
+                        <div class="event">
+                            <div class="date">November 20, 2024</div>
+                            <div class="description">Deadline for course registration</div>
+                        </div>
+                        <div class="event">
+                            <div class="date">December 10, 2024</div>
+                            <div class="description">Last day of classes</div>
+                        </div>
+                        <div class="event">
+                            <div class="date">December 15, 2024</div>
+                            <div class="description">Final exams begin</div>
+                        </div>
+                        <!-- Add more events as needed -->
+                    </div>
+                    <!-- Add more events as needed -->
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; 2024 JIMM university. All rights reserved.</p>
+        </footer>
+    </header>
+    <script src="script.js"></script> <!-- Link to your JavaScript file -->
+</body>
+
+</html>

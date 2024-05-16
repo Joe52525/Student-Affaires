@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Student</title>
+    <link rel="stylesheet" href="{% static 'css/viewStudent.css' %}">
+</head>
+
+<body>
+    <section>
+        <div class="layer">
+            <header>
+                <nav class="navbar">
+                    <div class="left">
+                        <img src="{% static 'imgs/logo-re.png' %}" alt="College Logo">
+                    </div>
+                    <div class="right">
+
+                        <button><a href="{% url 'admin' %}">Home</a></button>
+                        <img src="{% static 'imgs/profile.png' %}" alt="Profile Logo">
+                    </div>
+                </nav>
+            </header>
+            <div class="background">
+                <div class="search-container">
+                    <form class="search">
+                        <input type="text" id="search" name="search" placeholder="Search...">
+                        <button type="submit">Search</button>
+                    </form>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>GPA</th>
+                                <th>Department</th>
+                                <th>Rank</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>John Doe</td>
+                                <td>3.5</td>
+                                <td>Computer Science</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Jane Smith</td>
+                                <td>3.2</td>
+                                <td>Electrical Engineering</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Michael Johnson</td>
+                                <td>3.8</td>
+                                <td>Physics</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Alice Brown</td>
+                                <td>3.4</td>
+                                <td>Mathematics</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Emily Wilson</td>
+                                <td>3.6</td>
+                                <td>Chemistry</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>David Lee</td>
+                                <td>3.7</td>
+                                <td>Biology</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Sarah Taylor</td>
+                                <td>3.9</td>
+                                <td>History</td>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Robert Clark</td>
+                                <td>3.3</td>
+                                <td>English Literature</td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>Olivia White</td>
+                                <td>3.2</td>
+                                <td>Art</td>
+                                <td>9</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>James Anderson</td>
+                                <td>3.1</td>
+                                <td>Music</td>
+                                <td>10</td>
+                            </tr>
+                        </tbody>
+                        
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 JIMM university. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Grades</title>
+    <link rel="stylesheet" href="{% static 'css/viewGrades.css' %}"> <!-- Link to your CSS file -->
+</head>
+ 
+<body>
+    <header>
+        <div class="layer">
+            <nav class="navbar">
+                <div class="left">
+                    <img src="{% static 'imgs/logo-re.png' %}" alt="College Logo">
+                </div>
+                <div class="right">
+                    <button><a href="{% url 'Student' %}">Home</a></button>
+                    <img src="{% static 'imgs/profile.png' %}" alt="Profile Logo">
+                </div>
+            </nav>
+            <div class="grades-container">
+                <h2>Your Grades</h2>
+                <div class="dropdown">
+                    <select id="yearSelect" onchange="showGrades()">
+                        <option value="firstYear">First year</option>
+                        <option value="secondYear">Second year</option>
+                        <option value="thirdYear">Third year</option>
+                        <option value="fourthYear">Fourth year</option>
+                    </select>
+                </div>
+                <table id="gradesTable">
+                    <tr>
+                        <th>Subject</th>
+                        <!-- <th>Year</th> -->
+                        <th>Grade</th>
+                    </tr>
+                    <!-- First Year Subjects -->
+                    <tr id="mathRow">
+                        <td>Mathematics</td>
+                        
+                        <td>A</td>
+                    </tr>
+                    <tr id="physicsRow">
+                        <td>Physics</td>
+                        <td>B+</td>
+                    </tr>
+                    <tr id="chemRow">
+                        <td>Chemistry</td>
+                        
+                        <td>A-</td>
+                    </tr>
+ 
+                    <!-- Second Year Subjects -->
+                    <tr id="algRow" style="display:none;">
+                        <td>Algorithms</td>
+                        
+                        <td>A</td>
+                    </tr>
+                    <tr id="osRow" style="display:none;">
+                        <td>Operating Systems</td>
+                        
+                        <td>B</td>
+                    </tr>
+                    <tr id="dbRow" style="display:none;">
+                        <td>Database Systems</td>
+                        
+                        <td>B+</td>
+                    </tr>
+ 
+                    <!-- Third Year Subjects -->
+                    <tr id="networkRow" style="display:none;">
+                        <td>Computer Networks</td>
+                        
+                        <td>A-</td>
+                    </tr>
+                    <tr id="aiRow" style="display:none;">
+                        <td>Artificial Intelligence</td>
+                        
+                        <td>A</td>
+                    </tr>
+                    <tr id="seRow" style="display:none;">
+                        <td>Software Engineering</td>
+                        
+                        <td>B</td>
+                    </tr>
+ 
+                    <!-- Fourth Year Subjects -->
+                    <tr id="cyberRow" style="display:none;">
+                        <td>Cybersecurity</td>
+                        <td>A+</td>
+                    </tr>
+                    <tr id="cloudRow" style="display:none;">
+                        <td>Cloud Computing</td>
+                        <td>A</td>
+                    </tr>
+                    <tr id="webdevRow" style="display:none;">
+                        <td>Web Development</td>
+                        <td>B+</td>
+                    </tr>
+                    <!-- Add more rows for additional subjects -->
+                </table>
+                <!-- <button><a href="{% url 'Student' %}">Home</a></button> -->
+            </div>
+        </div>
+    </header>
+    <footer>
+        <p>&copy; 2024 JIMM university. All rights reserved.</p>
+    </footer>
+    <script>
+        function showGrades() {
+            var yearSelect = document.getElementById("yearSelect");
+            var selectedYear = yearSelect.options[yearSelect.selectedIndex].value;
+ 
+            var firstYearRows = document.querySelectorAll("#gradesTable tr[id^='mathRow'], #gradesTable tr[id^='physicsRow'], #gradesTable tr[id^='chemRow']");
+            var secondYearRows = document.querySelectorAll("#gradesTable tr[id^='algRow'], #gradesTable tr[id^='osRow'], #gradesTable tr[id^='dbRow']");
+            var thirdYearRows = document.querySelectorAll("#gradesTable tr[id^='networkRow'], #gradesTable tr[id^='aiRow'], #gradesTable tr[id^='seRow']");
+            var fourthYearRows = document.querySelectorAll("#gradesTable tr[id^='cyberRow'], #gradesTable tr[id^='cloudRow'], #gradesTable tr[id^='webdevRow']");
+ 
+            switch (selectedYear) {
+                case "firstYear":
+                    showRows(firstYearRows);
+                    hideRows(secondYearRows);
+                    hideRows(thirdYearRows);
+                    hideRows(fourthYearRows);
+                    break;
+                case "secondYear":
+                    showRows(secondYearRows);
+                    hideRows(firstYearRows);
+                    hideRows(thirdYearRows);
+                    hideRows(fourthYearRows);
+                    break;
+                case "thirdYear":
+                    showRows(thirdYearRows);
+                    hideRows(firstYearRows);
+                    hideRows(secondYearRows);
+                    hideRows(fourthYearRows);
+                    break;
+                case "fourthYear":
+                    showRows(fourthYearRows);
+                    hideRows(firstYearRows);
+                    hideRows(secondYearRows);
+                    hideRows(thirdYearRows);
+                    break;
+                default:
+                    hideAllRows();
+            }
+        }
+ 
+        function showRows(rows) {
+            rows.forEach(function(row) {
+                row.style.display = "table-row";
+            });
+        }
+ 
+        function hideRows(rows) {
+            rows.forEach(function(row) {
+                row.style.display = "none";
+            });
+        }
+ 
+        function hideAllRows() {
+            var allRows = document.querySelectorAll("#gradesTable tr[id^='mathRow'], #gradesTable tr[id^='physicsRow'], #gradesTable tr[id^='chemRow'], #gradesTable tr[id^='algRow'], #gradesTable tr[id^='osRow'], #gradesTable tr[id^='dbRow'], #gradesTable tr[id^='networkRow'], #gradesTable tr[id^='aiRow'], #gradesTable tr[id^='seRow'], #gradesTable tr[id^='cyberRow'], #gradesTable tr[id^='cloudRow'], #gradesTable tr[id^='webdevRow']");
+            allRows.forEach(function(row) {
+                row.style.display = "none";
+            });
+        }
+    </script>
+ 
+</body>
+ 
+</html>

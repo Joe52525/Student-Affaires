@@ -1,37 +1,24 @@
-"""
-URL configuration for store project.
 
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/5.0/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
-from django.contrib import admin
 from django.urls import path, include
-from . import index
-
+from . import views
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('JIMM.urls')),
+
+    path('',views.index,name='index'),
+    path('admin',views.admin,name='admin'),
+    path('Student',views.Student,name='Student'),
+    path('assignDepartment',views.assignDepartment,name='assignDepartment'),
+    path('viewStudent',views.viewStudent,name='viewStudent'),
+    path('browseCourse',views.browseCourse,name='browseCourse'),
+    path('viewID',views.viewID,name='viewID'),
+    path('viewGrades',views.viewGrades,name='viewGrades'),
+    path('viewSchedule',views.viewSchedule,name='viewSchedule'),
+    path('RegisterCourse',views.RegisterCourse,name='RegisterCourse'),
+    path('academicCalendar',views.academicCalendar,name='academicCalendar'),
+    path('newsAnnouncements',views.newsAnnouncements,name='newsAnnouncements'),
+    path('courseManagement',views.courseManagement,name='courseManagement'),
+    path('courseAssessment',views.courseAssessment,name='courseAssessment'),
+    path('instructorAssignment',views.instructorAssignment,name='instructorAssignment'),
+    path('courseCatalog',views.courseCatalog,name='courseCatalog'),
+    path('courseEvaluation',views.courseEvaluation,name='courseEvaluation'),
+    path('courseReport',views.courseReport,name='courseReport'),
 ]
-
-
-            
-
-
-        
-
-
-
-
-
-   
-

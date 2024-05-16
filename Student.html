@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/Student.css' %}"> 
+</head>
+
+<body>
+
+
+    <header>
+        <div class="layer">
+            <nav class="navbar">
+                <div class="left">
+                    <img src="{% static 'imgs/logo-re.png' %}" alt="College Logo">
+                </div>
+                <div class="right">
+                    <button><a href="{% url 'index' %}">Logout</a></button>
+                    <img src="{% static 'imgs/profile.png' %}" alt="Profile Logo">
+                </div>
+            </nav>
+            <div class="admin-container">
+                <h2>Welcome, Student</h2>
+                <div class="options">
+                    <button id="view-students-btn"><a href="{% url 'viewSchedule' %}">View Schedule</a></button>
+                    <button id="browse-courses-btn"><a href="{% url 'viewGrades' %}">View Grades</a></button>
+                    <button id="assign-department-btn"><a href="{% url 'viewID' %}">View ID</a></button>
+                    <button id="register-courses-btn"><a href="{% url 'RegisterCourse' %}">Register Courses</a></button> <!-- New button for registering courses -->
+                    <button id="academic-calendar-btn"><a href="{% url 'academicCalendar' %}">Academic Calendar</a></button>
+                    <button id="news-announcements-btn"><a href="{% url 'newsAnnouncements' %}">News and Announcements</a></button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <footer>
+        <p>&copy; 2024 JIMM university. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script> <!-- Link to your JavaScript file -->
+</body>
+
+</html>

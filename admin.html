@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/admin.css' %}">
+</head>
+
+<body>
+
+
+    <header>
+        <div class="layer">
+            <nav class="navbar">
+                <div class="left">
+                    <img src="{% static 'imgs/logo-re.png' %}" alt="College Logo">
+                </div>
+                <div class="right">
+                    <button><a href="{% url 'index' %}">Logout</a></button>
+                    <img src="{% static 'imgs/profile.png' %}" alt="Profile Logo">
+                </div>
+            </nav>
+            <div class="admin-container">
+                <h2>Welcome, Admin</h2>
+                <div class="options">
+                    <button id="view-students-btn"><a href="{% url 'viewStudent' %}">View Student</a></button>
+                    <button id="browse-courses-btn"><a href="{% url 'browseCourse' %}">Browse courses</a></button>
+                    <button id="assign-department-btn"><a href="{% url 'assignDepartment' %}">Assign Department</a></button>
+                    <button id="course-management-btn"><a href="{% url 'courseManagement' %}">Course Management</a></button>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <footer>
+        <p>&copy; 2024 JIMM university. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
