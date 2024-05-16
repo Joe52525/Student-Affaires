@@ -1,0 +1,119 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+header {
+    height: 100vh;
+    background-image: url(../imgs/AcademicCalendar.jpg);
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+
+header .layer {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.admin-container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+.event {
+    margin-bottom: 20px;
+}
+
+.date {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.description {
+    color: #333333;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 255, 255, 0.6);
+    padding: 0 10px;
+    color: #fff;
+}
+
+.navbar .left img {
+    height: 60px;
+}
+
+.navbar .right {
+    display: flex;
+}
+
+.navbar .right button {
+    margin-right: 10px;
+}
+
+.navbar .right a {
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar .right a:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+.navbar .right img {
+    height: 40px;
+}
+.option p {
+    color: #333;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Remove underline from anchor tags */
+a {
+    text-decoration: none !important;
+}

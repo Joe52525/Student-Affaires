@@ -1,0 +1,123 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.id-container {
+    
+    max-width: 400px;
+    margin: 200px auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.id-card {
+    display: flex;
+    align-items: center;
+}
+
+.id-photo {
+    margin-right: 20px;
+}
+
+.id-photo img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #007bff;
+}
+
+.id-details {
+    flex-grow: 1;
+}
+
+.id-details p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+header {
+    height: 100vh;
+    background-image: url(../imgs/ViewID.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.layer {
+    /* padding: 1px; */
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.id-details strong {
+    font-weight: bold;
+    color: #007bff;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button a {
+    color: white;
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255,255,255,0.6);
+    /* padding: 10px; */
+    padding: 0 10px;
+    color: #fff;
+}
+
+.navbar .left img {
+    height: 60px;
+}
+
+.navbar .right {
+    display: flex;
+}
+
+.navbar .right button {
+    margin-right: 10px;
+}
+
+.navbar .right a {
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* Add transition for smooth hover effect */
+}
+
+.navbar .right a:hover {
+    background-color: #0056b3;
+    /* Change background color on hover */
+    color: #fff;
+    /* Change text color on hover */
+}
+
+.navbar .right img {
+    height: 40px;
+}

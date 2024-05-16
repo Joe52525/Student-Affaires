@@ -1,0 +1,121 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    
+    background-color: #f3f3f3;
+    margin: 0; /* Reset default margin */
+}
+
+header {
+    background-image: url(../imgs/courseReport.jpg);
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 20px;
+}
+
+.main-content {
+    max-width: 1200px;
+    margin: 80px auto 0; /* Adjusted margin to add space below the navbar */
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #000000;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.6); /* Set background color to white */
+}
+
+table th,
+table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    color: black; /* Set text color to black */
+}
+
+table th {
+    background-color: #007bff;
+    color: #fff;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+}
+.navbar {
+    position: fixed; /* Fix navbar position */
+    top: 0; /* Position navbar at the top */
+    width: 100%; /* Make navbar full width */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255,255,255,0.6);
+    /* padding: 10px; */
+    padding: 0 10px;
+    color: #fff;
+}
+
+.navbar .left img {
+    height: 60px;
+}
+
+.navbar .right {
+    display: flex;
+}
+
+.navbar .right button {
+    margin-right: 10px;
+}
+
+.navbar .right a {
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* Add transition for smooth hover effect */
+}
+
+.navbar .right a:hover {
+    background-color: #0056b3;
+    /* Change background color on hover */
+    color: #fff;
+    /* Change text color on hover */
+}
+
+.navbar .right img {
+    height: 40px;
+}
+button {
+    margin-left: 8px;
+    padding: 8px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

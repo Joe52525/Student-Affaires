@@ -1,0 +1,123 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    box-sizing: border-box;
+}
+header {
+    height: 100vh;
+    background-image: url(../imgs/RegisterCourse.jpg);
+    background-size: cover;
+    background-position: center center;
+
+}
+
+header .layer {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.admin-container {
+    max-width: 400px;
+    margin: 190px auto;
+    background-color: rgb(255,255,255,0.6);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333333; /* Change to match the theme */
+}
+
+/* Additional styles for Register Courses */
+#course-registration-form {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"] {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #cccccc; /* Change to match the theme */
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Styles from Student.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255,255,255,0.6);
+    /* padding: 10px; */
+    padding: 0 10px;
+    color: #fff;
+}
+
+.navbar .left img {
+    height: 60px;
+}
+
+.navbar .right {
+    display: flex;
+}
+
+.navbar .right button {
+    margin-right: 10px;
+}
+
+.navbar .right a {
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* Add transition for smooth hover effect */
+}
+
+.navbar .right a:hover {
+    background-color: #0056b3;
+    /* Change background color on hover */
+    color: #fff;
+    /* Change text color on hover */
+}
+
+.navbar .right img {
+    height: 40px;
+}
+option p {
+    color: #333;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}

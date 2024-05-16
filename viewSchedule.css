@@ -1,0 +1,141 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* font-family: Arial, sans-serif; */
+    background-color: #f3f3f3;
+}
+header {
+    height: 100vh;
+    background-image: url(../imgs/ViewSchedule.jpg);
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+
+.layer {
+    /* padding: 1px; */
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.schedule-container {
+    max-width: 800px;
+    margin: 100px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table,
+th,
+td {
+    border:s 1px olid #dddddd;
+    padding: 12px;
+}
+
+th {
+    background-color: #f2f2f2;
+    color: #333333;
+}
+
+th,
+td {
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+button {
+    /* margin-top: 10px; */
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button a {
+    color: white;
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255,255,255,0.6);
+    /* padding: 10px; */
+    padding: 0 10px;
+    color: #fff;
+}
+
+.navbar .left img {
+    height: 60px;
+}
+
+.navbar .right {
+    display: flex;
+}
+
+.navbar .right button {
+    margin-right: 10px;
+}
+
+.navbar .right a {
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* Add transition for smooth hover effect */
+}
+
+.navbar .right a:hover {
+    background-color: #0056b3;
+    /* Change background color on hover */
+    color: #fff;
+    /* Change text color on hover */
+}
+
+.navbar .right img {
+    height: 40px;
+}
+.option p {
+    color: #333;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Remove underline from anchor tags */
+a {
+    text-decoration: none !important;
+}

@@ -1,0 +1,166 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* font-family: Arial, sans-serif; */
+    background-color: #f3f3f3;
+}
+
+section {
+    height: 100vh;
+    background-image: url(../imgs/ViewStudent.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.layer {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255,255,255,0.6);
+    /* padding: 10px; */
+    padding: 0 10px;
+    color: #fff;
+}
+
+.navbar .left img {
+    height: 60px;
+}
+
+.navbar .right {
+    display: flex;
+}
+
+.navbar .right button {
+    margin-right: 10px;
+}
+
+.navbar .right a {
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* Add transition for smooth hover effect */
+}
+
+.navbar .right a:hover {
+    background-color: #0056b3;
+    /* Change background color on hover */
+    color: #fff;
+    /* Change text color on hover */
+}
+
+.navbar .right img {
+    height: 40px;
+}
+button {
+    padding: 12px 20px; /* Adjusted padding */
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 6px; /* Adjusted border radius */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+.background {
+    padding: 50px 0;
+    width: 70%;
+    margin: 50px auto;
+    border-radius: 5px;
+}
+
+.view {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.view img {
+    width: 100px;
+}
+
+.search-container {
+    text-align: center;
+    margin: 10px;
+}
+
+.search {
+    display: inline-block;
+}
+
+.search input[type="text"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+.search button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search button:hover {
+    background-color: #0056b3;
+}
+
+.table-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+table th {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+table td {
+    background-color: #ffffff;
+}
+
+.option p {
+    color: #333;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Remove underline from anchor tags */
+a {
+    text-decoration: none !important;
+}

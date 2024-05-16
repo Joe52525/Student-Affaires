@@ -1,0 +1,124 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    
+    background-color: #f3f3f3;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+header {
+    min-height: 100vh; /* Use min-height instead of height */
+    background-image: url(../imgs/News.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed; /* Keeps the background fixed while scrolling */
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px; /* Add some padding to the bottom */
+}
+
+header .layer {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap; /* Allow flex items to wrap */
+    max-width: 1200px;
+    margin: 50px auto; /* Adjusted top margin */
+    padding: 20px;
+    justify-content: space-around; /* Evenly space items */
+}
+
+section {
+    flex: 1; /* Each section takes equal space */
+    margin-bottom: 30px;
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #000000;
+}
+
+article {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+article h3 {
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+article p {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+time {
+    color: #666;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 0 10px;
+    color: #fff;
+}
+
+.navbar .left img {
+    height: 60px;
+}
+
+.navbar .right {
+    display: flex;
+}
+
+.navbar .right button {
+    margin-right: 10px;
+}
+
+.navbar .right a {
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar .right a:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+.navbar .right img {
+    height: 40px;
+}
